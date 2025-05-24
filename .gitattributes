@@ -1,0 +1,4 @@
+*.verse_faiss.index filter=lfs diff=lfs merge=lfs -text
+*.verse_metadata.json filter=lfs diff=lfs merge=lfs -text
+*.verse_faissindex filter=lfs diff=lfs merge=lfs -text
+*verse_faiss.index filter=lfs diff=lfs merge=lfs -text

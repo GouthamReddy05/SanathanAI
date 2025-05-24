@@ -1,0 +1,132 @@
+SanathanAI is an AI-driven spiritual assistant designed to provide intelligent,
+respectful answers grounded in the scriptures of Sanatana Dharma, including the Vedas,
+Upanishads, Ramayana, Mahabharata, and other Hindu texts. Leveraging natural language
+processing (NLP),large language models (LLMs), and semantic search via vector embeddings,
+SanathanAI allows users to ask questions in natural language and receive contextually
+relevant responses. It aims to bridge the gap between ancient wisdom and modern 
+technology by offering a scalable, interactive, and scripturally accurate experience.
+
+
+--------------------------------------------------------------------------------------------->
+
+
+
+Tools & Technologies Required
+
+1. Programming Languages:
+
+Python (core logic and backend development)
+
+2. Frameworks:
+
+FastAPI – lightweight backend for serving APIs
+
+3. Django – for admin panel or web UI (optional)
+
+4. Natural Language Processing & AI:
+
+OpenAI API (e.g., GPT-4) or open-source LLMs (e.g., LLaMA, Mistral, Falcon)
+
+
+5. Vector Databases:
+
+FAISS – open-source and local, good for prototyping
+
+
+6. Data & Text Processing:
+
+PDF/Text parsers (e.g., PyMuPDF or pdfplumber)
+
+7. Frontend/UI (optional):
+
+React.js, Streamlit, or Django templates
+
+--------------------------------------------------------------------------------------------->
+
+
+🛠️ Steps to Build the Project
+
+1. Data Collection & Preprocessing
+
+Collect digitized scriptures (in English/Sanskrit, preferably translated and categorized).
+
+Clean and segment the text by verse, chapter, or paragraph.
+
+Preprocess text (remove unwanted symbols, normalize, tokenize).
+
+2. Embedding Generation
+
+Use an embedding model (like sentence-transformers/all-MiniLM-L6-v2) to convert text chunks into vector representations.
+
+Store these vectors in a vector database (FAISS or Pinecone) with metadata (scripture name, chapter, verse number).
+
+3. Build Retrieval System
+
+On user query, convert the question to an embedding.
+
+Search for top-k similar chunks using vector similarity.
+
+Retrieve top relevant passages to provide context for the LLM.
+
+4. Integrate with LLM (QA Pipeline)
+
+Feed the retrieved context + user query to an LLM (OpenAI GPT or local model like Mistral using Transformers).
+
+Use prompt engineering to ensure respectful and accurate responses (e.g., “Answer based only on the following texts…”).
+
+Apply safeguards for hallucination or inappropriate content.
+
+5. Backend Development
+
+Create APIs using FastAPI to handle:
+
+Query input
+
+Retrieval and response generation
+
+Logging and monitoring
+
+6. Web Interface (optional)
+
+Build a simple front-end to let users interact with the assistant.
+
+Chat interface (React, Streamlit, or Django)
+
+Display retrieved scripture references for transparency
+
+7. Optional Features
+
+Multilingual support (Hindi, Tamil, Sanskrit)
+
+Voice input/output (Speech-to-text and text-to-speech)
+
+Admin dashboard for adding/editing scriptural content
+
+User feedback mechanism for quality improvement
+
+8. Testing & Deployment
+
+Test for accuracy, cultural sensitivity, and factual grounding.
+
+Deploy using platforms like Render, Heroku, or AWS EC2.
+
+Add rate-limiting, authentication (if needed), and logging.
+
+✅ Final Outcome
+
+A web or API-based assistant that allows users to:
+
+Ask spiritual and philosophical questions
+
+Receive responses supported by exact scripture references
+
+Explore the richness of Sanatana Dharma in a guided and respectful manner
+
+
+
+What is sentence-transformers?
+
+It’s a Python library that provides easy access to
+pre-trained models that can convert sentences,
+paragraphs, or documents into dense vector embeddings
+(numerical representations).
